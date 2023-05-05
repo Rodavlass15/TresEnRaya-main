@@ -1,50 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="panel.css">
+    <title>Document</title>
 </head>
-<body>
+<body class="">
+    <!-- panelcito -->
+    <div class="panel-container">
+        <aside class="panel">
+            <br><br><br><br>
+            <div class="container-buttons">
+                <button class="btns" id="btnDarkMode">Modo Oscuro</button>
+                <br><br>
+                <button  class="btns" id="hard-mode-button">Modo difícil</button>
+                <br><br>
+                <button class="btns" id="single-player-mode-button">Modo Solo</button>
+            </div>
+<br>
+            <nav class="menu">
+                <a href="">Historial de partidas</a>
+                <p href="">Otros Juegos</p>
+                <a href="snake.html">Serpientita</a>
+                <a href="">Piedra papel o tijera</a>
+                <a href="">Memoria</a>
 
 
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-3 col-sm-offset-3 scoreBoard">
-				<h1>
-					<span id="p1Score"></span>
-				</h1>
-			</div>
-			<div class="col-sm-3 scoreBoard">
-				<h1 class="text-right">
-					<span id="p2Score"></span>
-				</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6 col-sm-offset-3" id="joinForm">
-				<h1 class="text-center colorDark">Enter your name</h1>
-				<div class="panel panel-danger">
-					<div class="panel-body">
-						<div class="input-group">
-							<input class="form-control input-lg" id="nickname"
-								autofocus="autofocus" /><span class="input-group-btn">
-								<button class="btn btn-lg btn-danger" id="startBtn">PLAY!</button>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-sm-offset-3" id="gameBoard"></div>
-		</div>
-	</div>
+            </nav>
+          </aside><br>
+          <button type="button" class="boton"></button>
+    </div>
 
-	<script src="/js/Board.js"></script>
-	<script src="/js/app.js"></script>
+<div class="container-without-panel">
+    
+    <div id="name-inputs">
+        <label for="player1-name">Jugador 1:</label>
+        <input  class="inputs-text" type="text" id="player1-name" placeholder="Eustaquia.." required>
+        <br>
+        <label for="player2-name">Jugador 2:</label>
+        <input  class="inputs-text" type="text" id="player2-name" placeholder="Clodomiro.." required>
+        <br>
+        <button id="start-game-button">PLAY!</button>
+      
+        <p class="name-game" >Tres En Raya #</p>
+<div id="botones_partidas">
+        <button id="una_partida">1 partida</button>
+        <button id="tres_partidas">3 partidas</button>
+        <button id="cinco_partidas">5 partidas</button>
+    </div>
+    </div>
 
-</body>
+
+      <div class="show-cronometro">
+        <div id="turn-timer"></div>
+      </div>
+
+      
+      <div id="players">
+        <div id="player1"></div>
+        <div id="player2"></div>
+      </div>
+      <span id="etiqueta">
+      </span>
+    <table>
+        <tr>
+            <td class="my-shadow" id="0"></td>
+            <td id="1"></td>
+            <td id="2"></td>
+        </tr>
+        <tr>
+            <td id="3"></td>
+            <td id="4"></td>
+            <td id="5"></td>
+        </tr>
+        <tr>
+            <td id="6"></td>
+            <td id="7"></td>
+            <td id="8"></td>
+        </tr>
+    </table>
+</div>
+    
+    </body>
+    <script src="game.js"></script>
+    <script src="panel.js"></script>
+    <script src="modoOscuro.js"></script>
 </html>
 
